@@ -1,8 +1,8 @@
 # manga-reader
 Simple manga/webtoon reader
 
-Requirements
+## Requirements
 
--python 3.x
+* Python 3.x
+* PyQt5
 
--pyqt5
