@@ -225,8 +225,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.luder.done.connect(self.resume_reading)
 
     def scroll_slot(self, value):
-        config['%s' % self.luder.adres]['resumepoint'] = str(value)
-
+        if self.resume_checkbox.isChecked():
+            try:
+                config['%s' % self.luder.adres]['resumepoint'] = str(value)
+            except:
+                pass
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
